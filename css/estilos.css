@@ -2,6 +2,11 @@ html, body{
     height: 100vh;
 }
 
+*::selection{
+    background-color: #ECCBB8;
+    color: #282739;
+}
+
 /* comienza nav */
 
 .rounded-circle {
@@ -20,6 +25,10 @@ html, body{
 
 .nav-link{
     color: #282739 !important;
+}
+
+.nav-link:hover{
+    font-weight: bolder;
 }
 
 .buttonColor{
