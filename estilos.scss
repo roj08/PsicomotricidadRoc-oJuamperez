@@ -2,9 +2,9 @@ html, body{
  min-height: 100vh;
 }
 
-$color1: $color1;
+$color1: #282739;
 
-$color2: $color2;
+$color2: #ECCBB8;
 
 *::selection{
     background-color: $color2;
@@ -46,7 +46,25 @@ $color2: $color2;
 // comienza Home
 
 .pHome{
-    background-color: $color18a;
+    background-color:#282739a8;
+}
+
+@media only screen and (max-width: 460px) {
+    .pHome{
+        font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .pHome{
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .pHome{
+        font-size: 10px !important;
+    }
 }
 
 //fin Home
@@ -257,14 +275,13 @@ $color2: $color2;
     background-color: $color2;
     color: $color1;
     border: $color2;
-
-    .btn:hover{
-        background-color: #ecbb9e;
-        color: $color1;
-        font-weight: bolder;
-    }
 }
 
+.btn:hover{
+    background-color: #ecbb9e;
+    color: $color1;
+    font-weight: bolder;
+}
 
 .logo{
     height: 60px;
