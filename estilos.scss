@@ -1,13 +1,17 @@
 html, body{
-    height: 100vh;
+ min-height: 100vh;
 }
+
+$color1: $color1;
+
+$color2: $color2;
 
 *::selection{
-    background-color: #ECCBB8;
-    color: #282739;
+    background-color: $color2;
+    color: $color1;
 }
 
-/* comienza nav */
+//comienza nav
 
 .rounded-circle {
     height: 80px;
@@ -20,47 +24,51 @@ html, body{
 }
 }
 .navbar {
-    background-color: #ECCBB8;
+    background-color: $color2;
+    .nav-link{
+        color: $color1 !important;
+    }
+    .nav-link:hover{
+        font-weight: bolder;
+    }
+    .buttonColor{
+        background-color: $color1;
+    }
 }
 
-.nav-link{
-    color: #282739 !important;
-}
-
-.nav-link:hover{
-    font-weight: bolder;
-}
-
-.buttonColor{
-    background-color: #282739;
-}
-
-/* fin nav */
+//fin nav
 
 .mainCol{
-    background-color: #282739;
-    color: #ECCBB8;
+    background-color: $color1;
+    color: $color2;
 }
 
+// comienza Home
+
+.pHome{
+    background-color: $color18a;
+}
+
+//fin Home
 
 /* comienza que es*/
 
 .jumbotron{
-    background-color: #282739;
+    background-color: $color1;
     text-align: center;
 }
 
 .card-header {
-    background-color: #ECCBB8;
+    background-color: $color2;
     font-weight: bolder;
 }
 
 .card-body {
-    background-color: #282739;
+    background-color: $color1;
 }
 
 .card-link{
-    color: #282739 !important;
+    color: $color1 !important;
 }
 
 /* fin que es */
@@ -85,7 +93,7 @@ html, body{
 /* comienza servicios */
 
 .serv{
-    color: #282739;
+    color: $color1;
     font-size: 15px;
     font-weight: bolder;
     background-color: #f5d7c5;
@@ -250,14 +258,14 @@ html, body{
 /* comienza contacto */
 
 .btn {
-    background-color: #ECCBB8;
-    color: #282739;
-    border: #ECCBB8;
+    background-color: $color2;
+    color: $color1;
+    border: $color2;
 }
 
 .btn:hover{
     background-color: #ecbb9e;
-    color: #282739;
+    color: $color1;
     font-weight: bolder;
 }
 
@@ -277,6 +285,6 @@ html, body{
 /* fin contacto */
 
 .containerServicios{
-    background-color: #ECCBB8;
-    color: #282739;
+    background-color: $color2;
+    color: $color1;
 }
