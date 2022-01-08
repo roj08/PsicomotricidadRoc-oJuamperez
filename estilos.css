@@ -45,6 +45,11 @@ html, body {
   color: #ECCBB8;
 }
 
+.mainHome {
+  min-height: 650px;
+  background-color: #282739;
+}
+
 .pHome {
   background-color: #282739a8;
 }
