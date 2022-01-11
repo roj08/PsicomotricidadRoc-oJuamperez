@@ -90,14 +90,14 @@ html, body {
 }
 
 .imgQuien {
-  height: 400px;
   width: auto;
+  height: 400px;
 }
 
 @media only screen and (max-width: 425px) {
   .imgQuien {
-    height: 300px;
     width: auto;
+    height: 300px;
   }
 }
 

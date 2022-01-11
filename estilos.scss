@@ -12,6 +12,11 @@ $colors: (
     color: map-get($colors, color1);
 }
 
+@mixin sizes ($widthImgQ, $heightImgQ){
+    width: $widthImgQ;
+    height: $heightImgQ;
+}
+
 //comienza nav
 
 .rounded-circle {
@@ -99,15 +104,13 @@ $colors: (
 //comienza quien
 
 .imgQuien {
-    height: 400px;
-    width: auto;
+    @include sizes(auto, 400px)
 }
 
 @media only screen and (max-width: 425px) {
 
     .imgQuien{
-        height: 300px;
-        width: auto;
+        @include sizes(auto, 300px)
     }
 }
 
