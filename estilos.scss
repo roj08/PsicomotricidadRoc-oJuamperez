@@ -2,13 +2,14 @@ html, body{
  min-height: 100vh;
 }
 
-$color1: #282739;
-
-$color2: #ECCBB8;
+$colors: (
+    color1: #282739,
+    color2: #ECCBB8,
+);
 
 *::selection{
-    background-color: $color2;
-    color: $color1;
+    background-color: map-get($colors, color2);
+    color: map-get($colors, color1);
 }
 
 //comienza nav
@@ -24,30 +25,30 @@ $color2: #ECCBB8;
 }
 }
 .navbar {
-    background-color: $color2;
+    background-color: map-get($colors, color2);
     .nav-link{
-        color: $color1 !important;
+        color: map-get($colors, color1) !important;
     }
     .nav-link:hover{
         font-weight: bolder;
     }
     .buttonColor{
-        background-color: $color1;
+        background-color: map-get($colors, color1 );
     }
 }
 
 //fin nav
 
 .mainCol{
-    background-color: $color1;
-    color: $color2;
+    background-color: map-get($colors, color1 );
+    color: map-get($colors, color2);
 }
 
 // comienza Home
 
 .mainHome{
     min-height: 650px;
-    background-color: $color1;
+    background-color: map-get($colors, color1);
 }
 
 .pHome{
@@ -77,20 +78,20 @@ $color2: #ECCBB8;
 //comienza que es
 
 .jumbotron{
-    background-color: $color1;
+    background-color: map-get($colors, color1);
     text-align: center;
 }
 
 .card-header {
-    background-color: $color2;
+    background-color: map-get($colors, color2);
     font-weight: bolder;
     .card-link{
-        color: $color1 !important;
+        color: map-get($colors, color1) !important;
     }
 }
 
 .card-body {
-    background-color: $color1;
+    background-color: map-get($colors, color1);
 }
 
 //fin que es
@@ -123,7 +124,7 @@ $color2: #ECCBB8;
     padding: 8% 5%;
     text-align: center;
     .serv{
-        color: $color1;
+        color: map-get($colors, color1);
         font-size: 15px;
         font-weight: bolder;
         background-color: #f5d7c5;
@@ -277,14 +278,14 @@ $color2: #ECCBB8;
 //comienza contacto
 
 .btn {
-    background-color: $color2;
-    color: $color1;
-    border: $color2;
+    background-color: map-get($colors, color2);
+    color: map-get($colors, color1);
+    border: map-get($colors, color2);
 }
 
 .btn:hover{
     background-color: #ecbb9e;
-    color: $color1;
+    color: map-get($colors, color1);
     font-weight: bolder;
 }
 
@@ -304,6 +305,6 @@ $color2: #ECCBB8;
 //fin contacto
 
 .containerServicios{
-    background-color: $color2;
-    color: $color1;
+    background-color: map-get($colors, color2);
+    color: map-get($colors, color1);
 }
