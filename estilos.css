@@ -40,14 +40,13 @@ html, body {
   background-color: #282739;
 }
 
-.mainCol {
+.mainCol, .mainHome {
   background-color: #282739;
   color: #ECCBB8;
 }
 
 .mainHome {
   min-height: 650px;
-  background-color: #282739;
 }
 
 .pHome {

@@ -47,8 +47,8 @@ $colors: (
 // comienza Home
 
 .mainHome{
+    @extend .mainCol;
     min-height: 650px;
-    background-color: map-get($colors, color1);
 }
 
 .pHome{
