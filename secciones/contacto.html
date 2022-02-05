@@ -40,7 +40,7 @@
 
         <div class="container">
 
-            <form action="../mail/action_page.php" class="needs-validation pt-5" method="post">
+            <form action="../mail/action_page.php" class="needs-validation novalidate pt-5" method="POST">
               <div class="form-group">
                 <label for="uname">Nombre</label>
                 <input type="text" class="form-control" id="uname" placeholder="Ingrese su nombre" name="uname" required>
@@ -75,6 +75,27 @@
                 <a href="https://api.whatsapp.com/send?phone=+5491163633957"><img src="../imagenes/whatsappLogo.png" alt="whatsapp" class="logo logoWpp"></a>
             </div>
         </div>
+
+        <script>
+            // Disable form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+        </script>
 
     </main>
 

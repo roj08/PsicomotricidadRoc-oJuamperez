@@ -1,26 +1,39 @@
 <?php
-// Revisa si los campos están vacíos
-if(empty($_POST['name'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['number']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-	echo "No arguments Provided!";
-	return false;
-   }
-	
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-	
-// Crea el mensaje que va a enviar
-$to = 'rociojuamperez@gmail.com'; // //Añada su dirección de correo electrónico reemplazando suNombre@suDominio.com - Aquí es donde el formulario enviará un mensaje. Puede ser @gmail.com
-$email_subject = "formulario web enviado por:  $name";
-$email_body = "Ha recibido un nuevo mensaje de su formulario de contacto del sitio web.\n\n"."Aquí están los detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nTeléfono: $number\n\nMensaje:\n$message";
-$headers = "psicomotricidadlucianacora@000webhostapp.com/\n";// Esta es la dirección de correo electrónico de la que se generará el mensaje. DEBE TENER EL DOMINIO DONDE ESTÁ ALOJADA LA WEB
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
-?>
+
+if (empty($_POST["uname"])) {
+    exit("Falta el nombre");
+}
+
+if (empty($_POST["email"])) {
+    exit("Falta el correo");
+}
+
+if (empty($_POST["message"])) {
+    exit("Falta el mensaje");
+}
+
+$nombre = $_POST["uname"];
+$correo = $_POST["email"];
+$mensaje = $_POST["message"];
+
+$correo = filter_var($correo, FILTER_VALIDATE_EMAIL);
+if (!$correo) {
+    echo "Correo inválido. Intenta con otro correo.";
+    exit;
+}
+
+$asunto = "Nuevo mensaje de sitio web";
+
+$datos = "De: $nombre\nCorreo: $correo\nMensaje: $mensaje";
+$mensaje = "Has recibido un mensaje desde el formulario de contacto de tu sitio web. Aquí están los detalles:\n$datos";
+$destinatario = "coralucianapsm@gmail.com";
+$encabezados = "Sender: psicomotricidadlucianacora@files.000webhost.com\r\n";
+$encabezados .= "From: $nombre <" . $correo . ">\r\n";
+$encabezados .= "Reply-To: $nombre <$correo>\r\n";
+$resultado = mail($destinatario, $asunto, $mensaje, $encabezados);
+if ($resultado) {
+    echo "<h1>Mensaje enviado, ¡Gracias por contactarme!</h1>";
+    echo "<p>Tu mensaje se ha enviado correctamente.</p><h2>Importante</h2><p>Revisa tu bandeja de SPAM, en ocasiones mis respuestas quedan ahí. </p>";
+} else {
+    echo "Tu mensaje no se ha enviado. Intenta de nuevo.";
+}
