@@ -53,7 +53,7 @@ $colors: (
 
 .mainHome{
     @extend .mainCol;
-    min-height: 650px;
+    min-height: 950px;
 }
 
 .pHome{
@@ -82,6 +82,11 @@ $colors: (
 
 //comienza que es
 
+.mainQueEs{
+    @extend .mainCol;
+    min-height: 950px;
+}
+
 .jumbotron{
     background-color: map-get($colors, color1);
     text-align: center;
@@ -102,6 +107,11 @@ $colors: (
 //fin que es
 
 //comienza quien
+
+.mainQuien{
+    @extend .mainCol;
+    min-height: 950px;
+}
 
 .imgQuien {
     @include sizes(auto, 400px)
@@ -151,7 +161,7 @@ $colors: (
     }
     
     .serv1::after{
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellendus nam quidem eaque sapiente asperiores. Tempora.";
+        content: "Grupos reducidos de juego libre y corporal, un espacio seguro y de confianza para explorar el ambiente, los objetos y el hacer con el propio cuerpo, acompañados por pares.";
         align-content: center;
         top: 50%;
         left: 50%;
@@ -182,7 +192,7 @@ $colors: (
     }
     
     .serv2::after{
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellendus nam quidem eaque sapiente asperiores. Tempora.";
+        content: "Sesiones individuales de 45 minutos de duración. Atención particular, obra social y prepagas.";
         align-content: center;
         top: 50%;
         left: 50%;
@@ -213,7 +223,7 @@ $colors: (
     }
     
     .serv3::after{
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellendus nam quidem eaque sapiente asperiores. Tempora.";
+        content: "Las sesiones individuales pueden realizarse tanto en modalidad presencial como virtual. Sin embargo, al trabajar con niños, se recomienda el encuentro presencial.";
         align-content: center;
         top: 50%;
         left: 50%;
@@ -280,6 +290,11 @@ $colors: (
 
 //comienza contacto
 
+.mainContacto{
+    @extend .mainCol;
+    min-height: 950px;
+}
+
 .btn {
     background-color: map-get($colors, color2);
     color: map-get($colors, color1);
@@ -310,4 +325,44 @@ $colors: (
 .containerServicios{
     background-color: map-get($colors, color2);
     color: map-get($colors, color1);
+}
+
+.footerL2{
+    color: map-get($colors, color1) !important;
+}
+.footerL2:hover{
+    font-weight: bolder;
+    text-decoration: inherit;
+}
+
+.footerL3{
+    color: map-get($colors, color1) !important;
+}
+.footerL3:hover{
+    font-weight: bolder;
+    text-decoration: inherit;
+}
+
+.footerL4{
+    color: map-get($colors, color1) !important;
+}
+.footerL4:hover{
+    font-weight: bolder;
+    text-decoration: inherit;
+}
+
+.footerR2{
+    color: map-get($colors, color1) !important;
+}
+.footerR2:hover{
+    font-weight: bolder;
+    text-decoration: inherit;
+}
+
+.footerR3{
+    color: map-get($colors, color1) !important;
+}
+.footerR3:hover{
+    font-weight: bolder;
+    text-decoration: inherit;
 }

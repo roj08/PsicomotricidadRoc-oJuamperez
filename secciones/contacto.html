@@ -8,7 +8,7 @@
         <meta name="keywords" content="PSICOMOTRICIDAD, LICENCIADA, APRENDIZAJE, PSICOMOTRICISTA">
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="../estilos.css">
+        <link rel="stylesheet" href="../scss/estilos.css">
     
         <title>Contacto - Psicomotricidad</title>
     </head>
@@ -31,16 +31,16 @@
         </nav>
     </header>
 
-    <main class="mainCol container-fluid p-5">
-        <h2 class="text-center">Contacto</h2>
+    <main class="mainCol container-fluid p-5 mainContacto">
+        <h2 class="text-center pb-3">Contacto</h2>
 
-        <div class="text-center">
+        <div class="text-center pb-5">
             <p>Puedes enviar tus dudas a través del formulario de contacto. También te invito a visitar mis redes sociales y comunicarte a través de las mismas.</p>
         </div>
 
         <div class="container">
 
-            <form action="/action_page.php" class="was-validated">
+            <form action="../mail/action_page.php" class="needs-validation pt-5" method="post">
               <div class="form-group">
                 <label for="uname">Nombre</label>
                 <input type="text" class="form-control" id="uname" placeholder="Ingrese su nombre" name="uname" required>
@@ -49,7 +49,7 @@
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Ingrese su email" name="email" required>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su email" name="email" required>
                 <div class="valid-feedback">Ok</div>
                 <div class="invalid-feedback">Por favor, ingrese un email válido</div>
               </div>
@@ -59,16 +59,20 @@
                 <div class="valid-feedback">Ok</div>
                 <div class="invalid-feedback">Por favor, ingrese un teléfono de contacto válido</div>
               </div>
+              <div class="form-group">
+                <label for="message">Consulta</label>
+                <textarea required placeholder="Escribe tu consulta" class="form-control" name="message" id="message" cols="30" rows="5"></textarea>
+              </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
     
-        <div class="container-fluid row">
+        <div class="container-fluid row pt-5">
             <div class="col-6">
                 <a href="https://www.instagram.com/psicomotricidad.cora/"><img src="../imagenes/instagramLogo.png" alt="instagram" class="logo logoInst"></a>
             </div>
             <div class="col-6">
-                <img src="../imagenes/whatsappLogo.png" alt="whatsapp" class="logo logoWpp">
+                <a href="https://api.whatsapp.com/send?phone=+5491163633957"><img src="../imagenes/whatsappLogo.png" alt="whatsapp" class="logo logoWpp"></a>
             </div>
         </div>
 
@@ -77,16 +81,16 @@
     <footer>
         <div class="container-fluid containerServicios row m-0">
             <div class="col-6">
-                <h5 class="footerL1">Servicios</h5>
-                <h6 class="footerL2">Talleres de juegos</h6>
-                <h6 class="footerL3">Atención individual</h6>
-                <h6 class="footerL4">Modalidad presencial y/o virtual</h6>
+                <h5 class="footerL1">Secciones</h5>
+                <a href="queeslapsicomotricidad.html"><h6 class="footerL2">¿Qué es la psicomotricidad?</h6></a>
+                <a href="quiensoy.html"><h6 class="footerL3">¿Quién soy?</h6></a>
+                <a href="servicios.html"><h6 class="footerL4">Servicios</h6></a>
             </div>
 
             <div class="float-right text-right col-6">
                 <h5 class="footerR1">Datos de contacto</h5>
-                <h6 class="footerR2">Celular</h6>
-                <h6 class="footerR3">Email</h6>
+                <a href="https://api.whatsapp.com/send?phone=+5491163633957"><h6 class="footerR2">Enviar whatsapp</h6></a>
+                <a href="contacto.html"><h6 class="footerR3">Email</h6></a>
             </div>
         </div>
     </footer>
